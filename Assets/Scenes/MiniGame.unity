@@ -265,7 +265,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 53b8e877cc903af47a79f738282625a2, type: 2}
+  - {fileID: 2100000, guid: b970dae084643234cb45459393a6c8dc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -383,6 +383,9 @@ MonoBehaviour:
   speed: 10
   countText: {fileID: 1855419650}
   winTextObject: {fileID: 286011295}
+  jump: {x: 0, y: 0, z: 0}
+  jumpForce: 2
+  isGrounded: 0
 --- !u!4 &164142441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1825899411730409554, guid: c01111e5e97d6cb4cb10233eb915152d,
@@ -1687,7 +1690,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f47329ca8f345bd4f872add01a905ebd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2195,7 +2198,7 @@ GameObject:
   - component: {fileID: 1653884251}
   m_Layer: 0
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2242,7 +2245,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 89ec7bd6250c7c64b86b81e1efd70294, type: 2}
+  - {fileID: 2100000, guid: 2bda2b9835773bd49910c426011c8530, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
