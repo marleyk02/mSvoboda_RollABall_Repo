@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 using TMPro;
 
 public class PlayerController1 : MonoBehaviour
 {
+    public UnityEvent onHit;
     public float speed = 0;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
@@ -64,8 +66,11 @@ public class PlayerController1 : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 1;
             SetCountText();
+
+            onHit.Invoke();
+            gameObject.SetActive(false);
         }
-        
+
     }
 
     private void OnCollisionEnter(Collision collision)
