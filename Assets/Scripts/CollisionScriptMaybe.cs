@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class CollisionScriptMaybe : MonoBehaviour
 {
+    Vector3 originalPos;
     public UnityEvent onHit;
     public float destroyTime;
     public GameObject Snowball;
@@ -12,22 +13,30 @@ public class CollisionScriptMaybe : MonoBehaviour
 
     void Start()
     {
-        
+        originalPos = Snowball.transform.position;
+    }
+
+    private void OnDisable()
+    {
+        transform.position = originalPos;
     }
 
     private void OnTriggerEnter()
     {
-        StartCoroutine("RespawnBall");
+        //GameObject duplicate = Instantiate(Snowball);
+        //StartCoroutine("RespawnBall");
         //onHit.Invoke();
         Destroy(gameObject);
+        //Snowball.SetActive(false);
         
-        //gameObject.SetActive(false);
     }
 
-    IEnumerator RespawnBall()
-    {
-        GameObject clone = (GameObject)Instantiate(Snowball, ballPosition, Quaternion.identity) as GameObject;
-        yield return null;
-    }
+    //IEnumerator RespawnBall()
+    //{
+        
+       //GameObject clone = (GameObject)Instantiate(Snowball, ballPosition, Quaternion.identity) as GameObject;
+        
+       // yield return null;
+    //}
 
 }
