@@ -9,24 +9,22 @@ public class CollisionScriptMaybe : MonoBehaviour
     public UnityEvent onHit;
     public float destroyTime;
     public GameObject Snowball;
-    Vector3 ballPosition = new Vector3(-2.317f, 2.124f, 3.666f);
+    //Vector3 ballPosition = new Vector3(-2.317f, 2.124f, 3.666f);
 
     void Start()
     {
-        originalPos = Snowball.transform.position;
+        originalPos = transform.position;
     }
 
-    private void OnDisable()
-    {
-        transform.position = originalPos;
-    }
+
 
     private void OnTriggerEnter()
     {
+        transform.position = originalPos;
         //GameObject duplicate = Instantiate(Snowball);
         //StartCoroutine("RespawnBall");
         //onHit.Invoke();
-        Destroy(gameObject);
+        //Destroy(gameObject);
         //Snowball.SetActive(false);
         
     }

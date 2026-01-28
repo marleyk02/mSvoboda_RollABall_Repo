@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
 
-    // NEW: particle explosion prefab for the ball
-    public GameObject explosionEffect;
+    // NEW: particle explosion prefab for the snowball
+    //public GameObject explosionEffect;
 
     void Start()
     {
